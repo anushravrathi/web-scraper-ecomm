@@ -34,4 +34,4 @@ for price in prices:
         break
 
 df = pd.DataFrame.from_dict(data)
-df.to_csv("data/data.csv",index=False)
+df.to_csv("data.csv",index=False)
