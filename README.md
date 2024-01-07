@@ -15,6 +15,8 @@ This Python-based web scraper is designed to extract product information from ec
 ### Prerequisites
 
 - Python installed on your machine.
+- Flask (install using `pip install Flask`)
+- pandas (install using `pip install pandas`)
 
 ### Installation
 
@@ -30,21 +32,41 @@ This Python-based web scraper is designed to extract product information from ec
     cd Ecommerce-Web-Scraper
     ```
 
-### Usage
+## Usage
 
-1. Customize the script for the specific ecommerce website you want to scrape.
-
-2. Run the scraper:
+1. Run the web scraper (`scraper.py`) to collect data from the target website:
 
     ```bash
-    python webScraping ecomm.py
+    python scraper.py
     ```
 
-3. The extracted product information will be saved to a CSV file.
+   This will generate a CSV file (`data/data.csv`) containing the extracted information.
+
+2. Run the Flask web application (`app.py`) to display the results:
+
+    ```bash
+    python app.py
+    ```
+
+   Access the application at [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your web browser.
+
+   The Flask application uses HTML templates for rendering. The main template file (`index.html`) is located in the `templates` folder.
+
+## Project Structure
+
+- `scraper.py`: Python script for web scraping.
+- `app.py`: Flask web application script.
+- `data/`: Folder containing the CSV file with extracted data.
+- `templates/`: Folder containing HTML templates for the web application.
 
 ## Customization
 
 The script is designed to be adaptable to different ecommerce websites. Customize the HTML element selectors and parsing logic in the `webScraping ecomm.py` file according to the structure of the target website.
+
+## Notes
+
+- Ensure that you have an active internet connection while running the web scraper to fetch data from the specified website.
+- The Flask web application will display the results in a tabular format on [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 
 ## Contributing
 
